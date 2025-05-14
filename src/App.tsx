@@ -1,10 +1,16 @@
 import "./App.scss";
-import Form from "./components/Form";
+import FormContainer from "./components/FormContainer";
+import { useScreenWidth } from "./hooks/useScreenWidth";
 
 function App() {
+  const screenWidth = useScreenWidth();
+  const isMobile = screenWidth < 768;
   return (
-    <div className="home_container">
-      <Form />
+    <div>
+      <div className="home_container">
+        <FormContainer />
+      </div>
+      <img src={`/${isMobile ? "mobile" : "desktop"}-design.jpg`} alt="" />
     </div>
   );
 }
