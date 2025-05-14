@@ -1,11 +1,13 @@
+import ButtonAction from "./ButtonAction";
+
 export default function SubscribeForm() {
   return (
     <form>
-      <span>Email address:</span>
-      <input type="text" placeholder=" email@company.com" />
-      <button>
-        <p>Subscribe to monthly newsletter</p>
-      </button>
+      <label htmlFor="email">
+        <h5>Email address</h5>
+      </label>
+      <input type="text" name="email" placeholder=" email@company.com" />
+      <ButtonAction text="Subscribe to monthly newsletter" />
     </form>
   );
 }

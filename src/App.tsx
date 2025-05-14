@@ -5,12 +5,11 @@ import { useScreenWidth } from "./hooks/useScreenWidth";
 function App() {
   const screenWidth = useScreenWidth();
   const isMobile = screenWidth < 768;
+
   return (
-    <div>
-      <div className="home_container">
-        <FormContainer />
-      </div>
-      <img src={`/${isMobile ? "mobile" : "desktop"}-design.jpg`} alt="" />
+    <div className="home_container">
+      <FormContainer />
+      {/* <img src={`/${isMobile ? "mobile" : "desktop"}-design.jpg`} alt="" /> */}
     </div>
   );
 }
